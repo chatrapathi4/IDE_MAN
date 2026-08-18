@@ -1,0 +1,120 @@
+/* ============================================================
+   EDITOR TOOLBAR
+   ============================================================ */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.toolbar__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.toolbar__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---- Toolbar Button ---- */
+.toolbar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.toolbar__btn--run {
+  background: var(--accent-green);
+  color: #000;
+  border-color: var(--accent-green);
+  font-weight: 600;
+}
+.toolbar__btn--run:hover:not(:disabled) {
+  background: var(--accent-green-hover);
+  border-color: var(--accent-green-hover);
+  box-shadow: var(--accent-green-glow);
+  transform: translateY(-1px);
+}
+.toolbar__btn--run:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toolbar__btn--save {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-color: var(--border-secondary);
+}
+.toolbar__btn--save:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+
+.toolbar__btn--reset {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border-primary);
+}
+.toolbar__btn--reset:hover {
+  background: rgba(255, 71, 87, 0.08);
+  color: var(--status-error);
+  border-color: rgba(255, 71, 87, 0.3);
+}
+
+/* ---- Spinner ---- */
+.toolbar__spinner {
+  animation: spin 0.7s linear infinite;
+}
+
+/* ---- Divider ---- */
+.toolbar__divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-primary);
+  flex-shrink: 0;
+}
+
+/* ---- Status dot ---- */
+.toolbar__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-left: auto;
+}
+
+.toolbar__status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  animation: pulse-dot 2s infinite;
+}
+
+.toolbar__status-dot--running {
+  background: var(--status-warning);
+}
+
+.toolbar__status-dot--error {
+  background: var(--status-error);
+  animation: none;
+}
