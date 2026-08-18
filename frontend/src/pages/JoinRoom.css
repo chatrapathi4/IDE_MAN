@@ -1,0 +1,120 @@
+/* ============================================================
+   JOIN ROOM PAGE
+   ============================================================ */
+.join-room-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  padding: 80px 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---- Card ---- */
+.join-room-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-secondary);
+  border-radius: 16px;
+  padding: 36px 36px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,212,106,0.07);
+  animation: fadeIn 0.5s ease both;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ---- Room ID input styled as monospace ---- */
+.join-room-id-input {
+  font-family: var(--font-mono) !important;
+  font-size: 16px !important;
+  letter-spacing: 2px;
+  color: var(--accent-green) !important;
+}
+
+.join-room-id-input::placeholder {
+  font-family: var(--font-mono);
+  color: var(--text-muted) !important;
+  letter-spacing: 1px;
+}
+
+/* ---- Hint text ---- */
+.join-room-hint {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ---- Paste button ---- */
+.join-room-paste-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.join-room-paste-btn:hover {
+  background: var(--accent-green-dim);
+  border-color: var(--border-accent);
+  color: var(--accent-green);
+}
+
+.join-room-paste-btn--pasted {
+  background: var(--accent-green-dim);
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+/* ---- Divider ---- */
+.join-room-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.join-room-divider::before,
+.join-room-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-primary);
+}
+
+/* ---- Create link ---- */
+.join-room-create-btn {
+  width: 100%;
+  padding: 11px;
+  background: transparent;
+  border: 1px dashed var(--border-secondary);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.join-room-create-btn:hover {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  background: var(--accent-green-dim);
+}
+
+@media (max-width: 480px) {
+  .join-room-card { padding: 24px 18px; }
+}

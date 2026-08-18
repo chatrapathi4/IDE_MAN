@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiShare2, FiCopy, FiCheck, FiUser } from "react-icons/fi";
+import {  Link } from "react-router-dom";
 import { BsCodeSlash } from "react-icons/bs";
 import "./Navbar.css";
 
@@ -19,14 +20,15 @@ function Navbar() {
   return (
     <nav className="navbar" id="navbar">
       {/* Logo */}
-      <div className="navbar__logo">
+      <Link to="/" className="navbar__logo">
         <div className="navbar__logo-icon">
           <BsCodeSlash size={16} />
         </div>
+
         <span className="navbar__brand">
           Code<span>Sync</span>
         </span>
-      </div>
+      </Link>
 
       {/* Room Badge */}
       <div className="navbar__room">

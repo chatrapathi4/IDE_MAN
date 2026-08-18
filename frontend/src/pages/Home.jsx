@@ -76,24 +76,24 @@ function Home() {
         </div>
 
         <div className="home-nav__links">
-          <button className="home-nav__link">Features</button>
-          <button className="home-nav__link">Docs</button>
-          <button className="home-nav__link">Pricing</button>
-          <button className="home-nav__link">GitHub</button>
+          <button className="home-nav__link" onClick={() => navigate("/features")}>Features</button>
+          <button className="home-nav__link" onClick={() => navigate("/docs")}>Docs</button>
+          <button className="home-nav__link" onClick={() => navigate("/pricing")}>Pricing</button>
+          <button className="home-nav__link" onClick={() => navigate("/github")}>GitHub</button>
         </div>
 
         <div className="home-nav__cta">
           <button
             className="btn btn-outline"
             id="home-nav-login-btn"
-            onClick={() => navigate("/editor")}
+            onClick={() => navigate("/login")}
           >
             Log In
           </button>
           <button
             className="btn btn-primary"
             id="home-nav-signup-btn"
-            onClick={() => navigate("/editor")}
+            onClick={() => navigate("/create-room")}
           >
             Get Started <FiArrowRight size={13} />
           </button>
@@ -133,7 +133,7 @@ function Home() {
             <button
               id="hero-create-room-btn"
               className="hero__btn hero__btn--primary"
-              onClick={() => navigate("/editor")}
+              onClick={() => navigate("/create-room")}
             >
               <FiPlay size={15} />
               Create a Room
@@ -141,7 +141,7 @@ function Home() {
             <button
               id="hero-join-room-btn"
               className="hero__btn hero__btn--secondary"
-              onClick={() => navigate("/editor")}
+              onClick={() => navigate("/join-room")}
             >
               <FiHash size={15} />
               Join a Room
@@ -269,7 +269,7 @@ function Home() {
         <button
           id="cta-start-btn"
           className="hero__btn hero__btn--primary"
-          onClick={() => navigate("/editor")}
+          onClick={() => navigate("/create-room")}
         >
           <FiPlay size={15} />
           Launch Editor
